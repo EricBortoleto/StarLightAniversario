@@ -1,0 +1,31 @@
+@use '../variables';
+
+.button {
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  border-radius: 50px;
+
+  &--primary {
+    color: variables.$textColor;
+    background-color: variables.$buttonBgColor;
+
+    &:hover {
+      background-color: variables.$buttonHoverBgColor;
+    }
+  }
+
+  @media (max-width: 640px) {
+    display: block;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+  }
+}
